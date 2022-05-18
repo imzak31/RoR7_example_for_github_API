@@ -15,6 +15,6 @@
 
 # Things to Improve:
 
-  Apply Services namespace to have a clearer context of the Services usage. 
-  Create a Constants class inside the GithubConnections module, to avoid re-using of BASE_URL constant.
-  Create more spec cases. (There is always something more to test, folks!)
+  * Apply Services namespace to have a clearer context of the Services usage. 
+  * Create a Constants class inside the GithubConnections module, to avoid re-using of BASE_URL constant.
+  * Create more spec cases. (There is always something more to test, folks!)
