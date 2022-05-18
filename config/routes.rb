@@ -1,6 +1,8 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  post '/developers', to: 'developers#save_developer_data'
+  get 'developers' => 'developers#show_developers'
+  get 'developers/search' => 'developers#find_developer_by_language'
+  get 'developers/username' => 'developers#find_developer_by_username'
 end
