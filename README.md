@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  Check the Gemfile to take in count Ruby/Rails versions
 
-Things you may want to cover:
+* Be sure of setting up your database credentials.
+* Run rake db:create && rake db:migrate
 
-* Ruby version
+* Start the server with: rails s
 
-* System dependencies
+* RUN ALL SPECS with rspec command inside the root folder. Please take into consideration that non-authenticated users has a limited number of requests per user.
 
-* Configuration
+* Check Routes file to check routes to test on Postman, or any HTTP client of your like.
 
-* Database creation
+- Important things to check: The service Objects structure, in order to modulate the app following Rails conventions of load    distribution.
 
-* Database initialization
+# Things to Improve:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  Apply Services namespace to have a clearer context of the Services usage. 
+  Create a Constants class inside the GithubConnections module, to avoid re-using of BASE_URL constant.
+  Create more spec cases. (There is always something more to test, folks!)
