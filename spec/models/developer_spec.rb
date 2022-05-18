@@ -5,7 +5,7 @@ RSpec.describe Developer, type: :model do
     before { described_class.create!(username: 'peter2', public_repos: 5, full_name: 'Peter Twot', 
                                     location: 'NY', language_proeficiency: {"Java"=>"50%", "JavaScript"=>"50%"}) }
 
-    valid_developer = Developer.new(username: 'imzak31', public_repos: 34, full_name: 'Adrian Centeno',
+    valid_developer = Developer.new(username: 'fabpot', public_repos: 34, full_name: 'Adrian Centeno',
                                     location: 'NY', language_proeficiency: {"Ruby"=>"50%", "Python"=>"50%"})
     it 'is valid with valid attributes' do
       expect(valid_developer).to be_valid
