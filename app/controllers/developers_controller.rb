@@ -1,4 +1,5 @@
 class DevelopersController < ApplicationController
+  require 'rest-client'
 
   def save_developer_data 
     fetch_developer_info
@@ -7,7 +8,8 @@ class DevelopersController < ApplicationController
                               location: @location, language_proeficiency: @language_proeficiency)
     developer.save
 
-    render json: developer, status: 201
+    render json: developer, status: 201 if developer.save
+    render json: { message: 'Developer already exists' }, status: 422 if !developer.save
   end
 
   def show_developers 
